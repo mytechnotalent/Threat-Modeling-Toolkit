@@ -1,0 +1,67 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# TMT Configuration - Lightweight Threat Modeling Toolkit
+# ──────────────────────────────────────────────────────────────────────────────
+# Copy this file to your project root and customize for your codebase.
+
+project_name: "my-startup-api"
+
+# Directories to scan (relative to --target path)
+target_dirs:
+  - "src"
+  - "app"
+  - "api"
+  - "routes"
+  - "handlers"
+  - "controllers"
+
+# File extensions to include
+file_extensions:
+  - ".py"
+  - ".js"
+  - ".ts"
+
+# Directories to skip
+exclude_dirs:
+  - "node_modules"
+  - ".venv"
+  - "venv"
+  - "__pycache__"
+  - ".git"
+  - "dist"
+  - "build"
+  - ".next"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Pattern-based scanner settings
+# ──────────────────────────────────────────────────────────────────────────────
+scanner:
+  enabled: true
+  severity_threshold: "low" # Report findings at this level and above
+  custom_patterns: {} # Add custom patterns here (advanced)
+
+# ──────────────────────────────────────────────────────────────────────────────
+# LLM-powered review settings
+# ──────────────────────────────────────────────────────────────────────────────
+# Set HF_TOKEN or TMT_LLM_API_KEY environment variable, or provide api_key below.
+# Supported providers: huggingface (free), openai, anthropic
+# Default uses Hugging Face free Inference API with Qwen2.5-72B-Instruct.
+llm:
+  enabled: false
+  provider: "huggingface"
+  model: "Qwen/Qwen2.5-72B-Instruct"
+  # api_key: ""              # Prefer HF_TOKEN or TMT_LLM_API_KEY env var
+  # base_url: ""             # For Ollama: http://localhost:11434/v1
+  temperature: 0.1 # Low temperature for deterministic results
+  max_tokens: 4096
+  timeout_seconds: 120
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Report output settings
+# ──────────────────────────────────────────────────────────────────────────────
+report:
+  output_dir: "reports"
+  formats:
+    - "markdown"
+    - "json"
+  include_code_snippets: true
+  max_snippet_lines: 10
