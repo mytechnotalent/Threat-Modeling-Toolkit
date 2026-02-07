@@ -12,7 +12,7 @@ This tutorial will discuss the pre-increment operator.
 
 <br>
 
-# TMT — Lightweight Threat Modeling Toolkit
+# Threat Modeling Toolkit
 
 Author: [Kevin Thomas](mailto:ket189@pitt.edu)
 
