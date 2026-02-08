@@ -4,14 +4,6 @@
 
 <br>
 
-# Today's Tutorial [February 8, 2026]
-## Lesson 104: ARM-32 Course 2 (Part 39 – Debugging Pre-Increment Operator)
-This tutorial will discuss debugging pre-increment operator.
-
--> Click [HERE](https://0xinfection.github.io/reversing) to read the FREE ebook.
-
-<br>
-
 # Threat Modeling Toolkit
 
 Author: [Kevin Thomas](mailto:ket189@pitt.edu)
